@@ -54,26 +54,27 @@
             <div class="row">
                 <div class="col-12  mb-5 mb-lg-0">
 
-                    <article class="row mb-5">
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <div class="post-slider slider-sm">
-                                <img loading="lazy" src="images/banner tcc.jpg" class="img-fluid" alt="post-thumb"
-                                    style="height:200px; object-fit: cover;">
+                    @forelse ($produtos as $produto)
+                        <article class="row mb-5">
+                            <div class="col-md-4 mb-4 mb-md-0">
+                                <div class="post-slider slider-sm">
+                                    <img loading="lazy" src="{{ asset("storage/$produto->foto") }}" class="img-fluid" alt="post-thumb"
+                                        style="height:200px; object-fit: cover;">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3 class="h5"><a class="post-title"
-                                    href="https://produto-oficial.net/tcc-sem-drama">TCC
-                                    Sem Drama
-                                </a></h3>
-                            <p>Saia do zero e conclua o seu TCC em até 27 dias, com mais facilidade ainda
-
-                                Passo a passo completo, que vai te levar do zero à conclusão do seu TCC – em menos de 30
-                                dias – com nota MÁXIMA.</p><a href="https://produto-oficial.net/tcc-sem-drama"
-                                class=" btn
+                            <div class="col-md-8">
+                                <h3 class="h5"><a class="post-title"
+                                        href="{{ $produto->link }}">{{ $produto->titulo }}</a></h3>
+                                <p>{{ $produto->descricao }}</p><a href="{{ $produto->link }}"
+                                    class=" btn
 								btn-outline-primary">Ver curso</a>
+                            </div>
+                        </article>
+                    @empty
+                        <div class="alert alert-danger" role="alert">
+                            Nenhum produto encontrado!
                         </div>
-                    </article>
+                    @endforelse
                 </div>
             </div>
         </div>

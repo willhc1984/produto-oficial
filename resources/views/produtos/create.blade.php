@@ -24,22 +24,22 @@
                     @csrf
                     @method('POST')
                     <div class="col-12">
-                        <label for="name" class="form-label">Título do produto:</label>
+                        <label for="titulo" class="form-label">Título do produto:</label>
                         <input type="text" class="form-control" name="titulo" id="titulo" value="{{ old('titulo') }}"
                             placeholder="Título do produto">
                     </div>
                     <div class="col-12">
-                        <label for="name" class="form-label">Descrição do produto:</label>
+                        <label for="descricao" class="form-label">Descrição do produto:</label>
                         <input type="text" class="form-control" name="descricao" id="descricao" value="{{ old('descricao') }}"
                             placeholder="Descrição do produto">
                     </div>
                     <div class="col-12">
-                        <label for="name" class="form-label">Link do produto:</label>
+                        <label for="link" class="form-label">Link do produto:</label>
                         <input type="text" class="form-control" name="link" id="link" value="{{ old('link') }}"
                             placeholder="Link do produto">
                     </div>
                     <div class="col-12">
-                        <label for="name" class="form-label">Imagem do produto:</label>
+                        <label for="imagem" class="form-label">Imagem do produto:</label>
                         <input type="file" class="form-control" name="imagem" id="imagem" value="{{ old('imagem') }}"
                             placeholder="Imagem do produto">
                     </div>

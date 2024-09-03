@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
@@ -13,7 +14,15 @@ class ProdutoController extends Controller
     }
 
     //Grava produto no banco de dados
-    public function store(){
-        dd("hello world!");
+    public function store(Request $request){
+        $file_name = rand(0,999999) . '-' . $request->file('imagem')->getClientOriginalName();
+        $path = $request->file('imagem')->storeAs('img', $file_name);
+        
+        $data = $request->all();
+        $data['foto'] = $path;
+
+        Produto::create($data);
+
+        return redirect()->route('home.index');
     }
 }
