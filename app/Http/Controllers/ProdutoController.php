@@ -83,4 +83,18 @@ class ProdutoController extends Controller
             return back()->withInput()->with('error', 'Produto não atualizado! Tente novamente');
         }
     }
+
+    //Excluir produto no banco de dados
+    public function destroy(Produto $produto)
+    {
+        try {
+            //Excluir registro do banco de dados
+            $produto->delete();
+            //Redireciona o usuario
+            return redirect()->route('produto.index')->with('success', 'Produto excluido!');
+        } catch (Exception $e) {
+            //Redireciona usuario, envia mensagem de erro
+            return redirect()->back()->with('error', 'Produto não excluido! Tente novamente.');
+        }
+    }
 }
