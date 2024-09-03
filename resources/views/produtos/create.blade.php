@@ -30,8 +30,8 @@
                     </div>
                     <div class="col-12">
                         <label for="descricao" class="form-label">Descrição do produto:</label>
-                        <input type="text" class="form-control" name="descricao" id="descricao" value="{{ old('descricao') }}"
-                            placeholder="Descrição do produto">
+                        <textarea class="form-control" aria-label="With textarea" name="descricao" id="descricao" value="{{ old('descricao') }}"
+                        placeholder="Descrição do produto"></textarea>
                     </div>
                     <div class="col-12">
                         <label for="link" class="form-label">Link do produto:</label>

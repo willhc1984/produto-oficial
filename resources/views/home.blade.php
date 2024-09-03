@@ -14,11 +14,10 @@
     <!-- plugins -->
     <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2"
         style="font-display: optional;">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset("plugins/bootstrap/bootstrap.min.css") }}" rel="stylesheet" />
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Montserrat:600%7cOpen&#43;Sans&amp;display=swap" media="screen">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('plugins/themify-icons/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/slick/slick.css') }}">
 
@@ -59,15 +58,14 @@
                             <div class="col-md-4 mb-4 mb-md-0">
                                 <div class="post-slider slider-sm">
                                     <img loading="lazy" src="{{ asset("storage/$produto->foto") }}" class="img-fluid" alt="post-thumb"
-                                        style="height:200px; object-fit: cover;">
+                                        style="height:200px; width: 510px; object-fit: cover;">
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-md-8">
                                 <h3 class="h5"><a class="post-title"
                                         href="{{ $produto->link }}">{{ $produto->titulo }}</a></h3>
                                 <p>{{ $produto->descricao }}</p><a href="{{ $produto->link }}"
-                                    class=" btn
-								btn-outline-primary">Ver curso</a>
+                                    class=" btn	btn-outline-primary">Ver curso</a>
                             </div>
                         </article>
                     @empty
@@ -133,13 +131,12 @@
 
 
     <!-- JS Plugins -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('plugins/jQuery/jquery.min.js') }} "></script>
     <script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('plugins/slick/slick.min.js') }}"></script>
 
     <!--Main Script -->
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/script_home.js') }}"></script>
 
 </body>
 

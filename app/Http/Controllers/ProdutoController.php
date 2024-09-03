@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
+    //Listar produtos no adm
+    public function index()
+    {
+        $produtos = Produto::orderBy('titulo')->paginate(10);
+        return view('produtos.index', [
+            'produtos' => $produtos
+        ]);
+    }
+
     //Carrega formulario cadastrar produto
     public function create()
     {
