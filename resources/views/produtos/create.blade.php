@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-12">
                         <label for="imagem" class="form-label">Imagem do produto:</label>
-                        <input type="file" class="form-control" name="imagem" id="imagem" value="{{ old('imagem') }}"
+                        <input type="file" class="form-control" name="foto" id="foto" value="{{ old('foto') }}"
                             placeholder="Imagem do produto">
                     </div>
                     <div class="col-12">
