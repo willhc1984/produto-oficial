@@ -21,6 +21,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 //Produtos
 Route::get('/index-produtos', [ProdutoController::class, 'index'])->name('produto.index');
 Route::get('/create-produtos', [ProdutoController::class, 'create'])->name('produto.create');
-Route::get('/edit-produtos', [ProdutoController::class, 'edit'])->name('produto.edit');
+Route::get('/edit-produtos/{produto}', [ProdutoController::class, 'edit'])->name('produto.edit');
 Route::post('/store-produtos', [ProdutoController::class, 'store'])->name('produto.store');
+Route::put('/update-produtos/{produto}', [ProdutoController::class, 'update'])->name('produto.update');
 Route::delete('/destroy-produtos/{produto}', [ProdutoController::class, 'destroy'])->name('produto.destroy');
