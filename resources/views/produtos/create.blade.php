@@ -20,7 +20,7 @@
 
                 <x-alert />
 
-                <form class="row g-3" action="{{ route('produto.store') }}" method="POST">
+                <form class="row g-3" action="{{ route('produto.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('POST')
                     <div class="col-12">
@@ -34,14 +34,14 @@
                             placeholder="Descrição do produto">
                     </div>
                     <div class="col-12">
-                        <label for="name" class="form-label">Imagem do produto:</label>
-                        <input type="text" class="form-control" name="imagem" id="imagem" value="{{ old('imagem') }}"
-                            placeholder="Imagem do produto">
-                    </div>
-                    <div class="col-12">
                         <label for="name" class="form-label">Link do produto:</label>
                         <input type="text" class="form-control" name="link" id="link" value="{{ old('link') }}"
                             placeholder="Link do produto">
+                    </div>
+                    <div class="col-12">
+                        <label for="name" class="form-label">Imagem do produto:</label>
+                        <input type="file" class="form-control" name="imagem" id="imagem" value="{{ old('imagem') }}"
+                            placeholder="Imagem do produto">
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary bt-sm">Cadastrar</button>
